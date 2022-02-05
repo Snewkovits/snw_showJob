@@ -14,9 +14,9 @@ Citizen.CreateThread(function()
     end
     if Config.debug == true then
         if ESX == nil then
-            print("Az ESX nem töltött be")
+            print("Can't load the ESX library")
         else
-            print("Az ESX ad vissza adatot")
+            print("ESX is succesfully loaded")
         end
     end
 end)
@@ -49,7 +49,7 @@ Citizen.CreateThread(function()
                 local outline = Config.text.outline
                 local fost2 = ESX.GetPlayerData().job.grade_label
                 if Config.debug == true then
-                    print("Sikeres betöltés")
+                    print("Succesfully loaded")
                 end
                 while jobbb do
                     Citizen.Wait(0)
@@ -71,13 +71,13 @@ Citizen.CreateThread(function()
                 end
             else
                 Citizen.Wait(0)
-                print("Sikertelen betöltés")
+                print("Succesfully loaded")
             end
             if Config.debug == true then
                 if playerJobdata == nil then
-                    print("A script nem tudta lekérni az adatokat")
+                    print("The script can't load any data")
                 else
-                    print("Sikeres lekérés de sikertelen lefutás")
+                    print("The script can load datas but can't start up")
                 end
             end
             return
