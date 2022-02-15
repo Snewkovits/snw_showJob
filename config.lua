@@ -2,6 +2,7 @@ Config = {}
 
 --DEVELOPER TOOLS
 Config.debug = false
+Config.Framework = ESX -- ESX // QBCore
 
 
 --JOB NAME
